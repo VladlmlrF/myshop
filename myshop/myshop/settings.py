@@ -23,10 +23,11 @@ if os.path.exists('my_env.py'):
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# SECRET_KEY = 'django-insecure-k)5a74%o67s!lenoqjf#co(-2=0$c0ocsi23w)mg7$pd5nuhui'
 SECRET_KEY = 'django-insecure-k)5a74%o67s!lenoqjf#co(-2=0$c0ocsi23w)mg7$pd5nuhui'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = 'True'
 
 ALLOWED_HOSTS = []
 
@@ -43,6 +44,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -135,3 +137,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 CART_SESSION_ID = 'cart'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51NnGMEKGEV9hqK8Y9UiotBwQ6jFUtITaW7kvo0aJTQOlSo2hpKkbE3n73FumWvcWY0HF5zkBmZhD9kcmfYAD8BQ700uKdVIDwm'
+STRIPE_SECRET_KEY = 'sk_test_51NnGMEKGEV9hqK8YJgtFAezj3Iy7GRHzucM0ipPyvgyihz87mcLEB4vrc3VpENaVdjDeQiSorPZdcUQj6q2mwdmo00KkpwbOcw'
+STRIPE_API_VERSION = '2023-08-16'
